@@ -64,6 +64,8 @@ get_directory_files(gchar *directory) {
 	Directory *dir = new_directory();
 
 	while((filename = (gchar *)g_dir_read_name(gdir))) {
+		if(filename[0] == '.')
+			continue;
 		dir->amount += 1;
 		dir->files = realloc(dir->files, sizeof(gchar *)*dir->amount);
 		dir->files[dir->amount-1] = filename;
@@ -92,10 +94,7 @@ reset_directory(GtkTreeStore *tree, GtkTreeIter *iter) {
 
 int
 w_strcmp(const void *a, const void *b) {
-	int result = strcmp((gchar *)a, (gchar *)b);
-	if(result != 0)
-		result *= -1;
-	return result;
+	return strcmp(*((gchar **)a),*((gchar **)b));
 }
 
 
