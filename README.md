@@ -1,6 +1,8 @@
 # Enceladus
 ## An XFCE4 File Manager Tree View Panel Plugin
 
+![screenshot](https://github.com/lf94/enceladus/raw/master/enceladus.png "A screenshot")
+
 ### Features/Behavior
 * click to (re)scan directories
 * traverse as many directories as you want
