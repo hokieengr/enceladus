@@ -13,4 +13,4 @@
 * libxfce4panel-1.0
 * gtk3
 * xfce
-
+* xdg-open
